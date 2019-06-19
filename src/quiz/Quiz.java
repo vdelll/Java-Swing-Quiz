@@ -23,14 +23,6 @@ public abstract class Quiz {
 		this.afficheQuestion();
 	}
 
-	/**
-	 * donne le résultat
-	 */
-	public void displayResults() {
-		endTime = System.currentTimeMillis();
-		timeElapsed = (endTime - startTime) / 1000;
-	}
-
 	public String resultat() {
 		endTime = System.currentTimeMillis();
 		timeElapsed = (endTime - startTime) / 1000;
@@ -58,7 +50,7 @@ public abstract class Quiz {
 	 * @param reponse
 	 */
 	public String verifReponse(String reponse) {
-		if (reponse.toLowerCase().equals(generator.getReponse().toLowerCase())) {
+		if (reponse.equalsIgnoreCase(generator.getReponse())) {
 			nbBonneRep++;
 			return "Bonne Réponse";
 		} else {

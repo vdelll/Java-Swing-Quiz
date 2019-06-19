@@ -2,7 +2,7 @@ package quiz;
 
 import java.util.Scanner;
 
-public class ConsoleQuiz extends Quiz{
+public class ConsoleQuiz extends Quiz {
 
 	public ConsoleQuiz(Generator generator) {
 		super(generator);
